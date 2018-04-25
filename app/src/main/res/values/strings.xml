@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Apklausu programele</string>
+    <string name="main_heading">UAB "Turto ekspertai"</string>
+    <string name="main_heading2">viešbučių apklausų sistema</string>
+    <string name="login_button_text">Prisijungti</string>
+    <string name="close_button_text">Išeiti</string>
+    <string name="login_heading">Prašome įvesti prisijungimo duomenis:</string>
+    <string name="login_textbox_username">prisijungimo vardas</string>
+    <string name="login_textbox_password">slaptažodis</string>
+    <string name="configuration_window_text">Prašome pasirinkti klausimyną iš sąrašo:</string>
+    <string name="submit_and_start">Patvirtinti ir paleisti</string>
+
+</resources>
