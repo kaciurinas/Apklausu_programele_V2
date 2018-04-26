@@ -1,18 +1,22 @@
-package com.example.rokas.apklausuprogramele
+package com.example.rokas.apklausuprogramele.ui
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.VolleyLog
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.rokas.apklausuprogramele.R.id.surveyListSpinner
+import com.example.rokas.apklausuprogramele.R
+import com.example.rokas.apklausuprogramele.network.EndPoints
+import com.example.rokas.apklausuprogramele.network.models.Questionaire
 import kotlinx.android.synthetic.main.activity_configure.*
-import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -40,7 +44,7 @@ class ConfigureActivity : AppCompatActivity() {
         }
         val submitButton: Button = findViewById(R.id.buttonSubmit)
         submitButton.setOnClickListener {
-            val intent = Intent(this, SurveyActivity :: class.java)
+            val intent = Intent(this, SurveyActivity:: class.java)
             intent.putExtra("activeSurvey", selectedQuestionaire.toString())
             startActivity(intent);
         }

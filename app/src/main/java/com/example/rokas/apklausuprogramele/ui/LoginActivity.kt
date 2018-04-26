@@ -1,21 +1,11 @@
-package com.example.rokas.apklausuprogramele
+package com.example.rokas.apklausuprogramele.ui
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_login.*
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.VolleyLog
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import com.example.rokas.apklausuprogramele.R.id.surveyListSpinner
-import kotlinx.android.synthetic.main.activity_main.*
-import org.json.JSONException
-import org.json.JSONObject
+import com.example.rokas.apklausuprogramele.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -35,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
             else{
                 if(username_input.equals("root") && password_input.equals("root")){
                     Toast.makeText(applicationContext, "All good", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, ConfigureActivity :: class.java)
+                    val intent = Intent(this, ConfigureActivity:: class.java)
                     startActivity(intent);
                 }
             }
