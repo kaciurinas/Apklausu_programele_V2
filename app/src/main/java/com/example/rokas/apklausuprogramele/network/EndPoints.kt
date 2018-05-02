@@ -1,4 +1,4 @@
-package com.example.rokas.apklausuprogramele
+package com.example.rokas.apklausuprogramele.network
 
 object EndPoints {
     private val URL_ROOT = "http://kaciurinas.lt/WebApi/v1/?op="

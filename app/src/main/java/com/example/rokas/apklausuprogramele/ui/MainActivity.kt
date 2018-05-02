@@ -1,17 +1,10 @@
-package com.example.rokas.apklausuprogramele
+package com.example.rokas.apklausuprogramele.ui
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import com.android.volley.AuthFailureError
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.VolleyError
-import com.android.volley.toolbox.StringRequest
-import org.json.JSONException
-import org.json.JSONObject
+import com.example.rokas.apklausuprogramele.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnOpenLogin : Button = findViewById(R.id.btn_open_login_screen);
         btnOpenLogin.setOnClickListener{
-            val intent = Intent(this, LoginActivity :: class.java)
+            val intent = Intent(this, LoginActivity:: class.java)
             startActivity(intent);
         }
 
