@@ -1,15 +1,13 @@
 package com.example.rokas.apklausuprogramele.ui
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
-import kotlinx.android.synthetic.main.activity_login.*
+import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import com.example.rokas.apklausuprogramele.R
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
