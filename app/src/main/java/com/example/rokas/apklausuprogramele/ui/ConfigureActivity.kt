@@ -16,6 +16,7 @@ import com.android.volley.toolbox.Volley
 import com.example.rokas.apklausuprogramele.R
 import com.example.rokas.apklausuprogramele.network.EndPoints
 import com.example.rokas.apklausuprogramele.network.models.Questionaire
+import com.example.rokas.apklausuprogramele.network.models.QuestionaireSpinnerAdapterArrayAdapter
 import kotlinx.android.synthetic.main.activity_configure.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -24,6 +25,7 @@ class ConfigureActivity : AppCompatActivity() {
 
     private var questionaireList = mutableListOf<Questionaire>()
     private var nameList = arrayListOf<String>()
+    private var idList = arrayListOf<Int>()
     var selectedQuestionaire = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,13 +65,18 @@ class ConfigureActivity : AppCompatActivity() {
                                 val id = array.getJSONObject(i).getString("id").toInt()
                                 val nof_questions = array.getJSONObject(i).getString("nof_questions").toInt()
                                 nameList.add(name);
+                                idList.add(id);
                                 val questionaire = Questionaire(
                                         id, name, nof_questions
                                 )
                                 questionaireList.add(questionaire);
-                                surveyListSpinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, nameList)
+
+                                //surveyListSpinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, nameList)
 
                             }
+                            val adapter = QuestionaireSpinnerAdapterArrayAdapter(this,
+                                    R.layout.support_simple_spinner_dropdown_item, questionaireList)
+                            surveyListSpinner.setAdapter(adapter);
                         } else {
                             Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show()
                         }
